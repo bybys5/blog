@@ -3,8 +3,24 @@
 <head>
 	<title>bryce</title>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <body>
-	<h1>Hello World</h1>
-	<h2>yoyoyo</h2>
+	<div id="app">
+		<h1>{{ text }}</h1>
+		<button @click="secondPage">to Second</button>
+	</div>
 </body>
+<script type="text/javascript">
+	new Vue({
+		el:'#app',
+		data:{
+			text:"Hello World"
+		},
+		methods:{
+			secondPage(){
+				window.location.href = "introduce.html"
+			}
+		}
+	})	
+</script>
 </html>
